@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Функція зі зведенням в ступінь</title>
+ <script type="text/javascript">
+
+ function power(base, exponent) {
+    if (typeof base !== 'number' || typeof exponent !== 'number') {
+        alert("Параметри повинні бути числами!");
+        return;
+    }
+    
+    let result = Math.pow(base, exponent);
+    return result;
+}
+
+let base = 2;
+let exponent = 3;
+let res = power(base, exponent);
+
+if (res !== undefined) {
+    document.write(`${base} зведене в ступінь ${exponent} дорівнює ${res}`);
+}
+
+ </script>
+</head>
+<body>
+</body>
+</html>

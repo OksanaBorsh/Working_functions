@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Арифметичні операції</title>
+ <script type="text/javascript">
+ function add(a, b) {
+    return a + b;
+}
+
+function subtract(a, b) {
+    return a - b;
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+
+function divide(a, b) {
+    return a / b;
+}
+
+function power(base, exponent) {
+    return Math.pow(base, exponent);
+}
+
+function squareRoot(num) {
+    return Math.sqrt(num);
+}
+
+let operand1 = parseInt(prompt("Введіть перше число: "));
+let sign = prompt("Введіть знак арифметичної операції: + - * / ^ √");
+let operand2 = parseInt(prompt("Введіть друге число: "));
+let result = undefined;
+
+switch (sign) {
+    case "+":
+        result = add(operand1, operand2);
+        break;
+    case "-":
+        result = subtract(operand1, operand2);
+        break;
+    case "*":
+        result = multiply(operand1, operand2);
+        break;
+    case "/":
+        result = divide(operand1, operand2);
+        break;
+    case "^":
+        result = power(operand1, operand2);
+        break;
+    case "√":
+        result = squareRoot(operand1);
+        break;
+    default:
+        document.write("<p><b style='color:red'>" + sign + "</b> - не є знаком арифметичної операції.");
+}
+
+if (result !== undefined) {
+    document.write("<p>" + operand1 + " " + sign + " " + operand2 + " = " + result);
+}
+
+ </script>
+</head>
+<body>
+</body>
+</html>
